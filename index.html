@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            color: black;
+            width: 100%;
+        }
+
+        .container {
+            width: 350px;
+            background-color: white;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        h1 {
+            width: 100%;
+            margin: 5px 0px 8px 0px auto;
+            text-align: center;
+            font-size: 30px;
+            padding: 0px;
+            font-weight: bold;
+            color: black;
+
+        }      
+
+        h6 {
+            margin: 5px;
+            padding: 2px;
+            font-size: 0.8em;
+            color: black
+        }
+
+        .form-group {
+            width: 100%;
+            margin: 0px;
+            padding: 5px;
+            text-align: left;
+        }
+
+        input[type=text]:hover {
+            background-color: greenyellow;
+            color: black;
+        }
+        .row{
+            text-align: left;
+        }
+
+        #btn {
+            width: 100px;
+            height: 40px;
+            border: 1px solid;
+            text-align: center;
+            margin-left: 3px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #data {
+            width: 100%;
+            margin: 0px auto;
+            padding: 0px;
+            text-align: left;
+        }
+
+        #title {
+            width: 100%;
+            margin: 0px auto;
+            padding: 0px;
+            text-align: left;
+        }
+
+        table {
+            text-align: left;
+            border-bottom: 1px white;
+            font-size: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+        }
+
+        tr {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        tr td:nth-child(1) {
+            width: 10%;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            flex-wrap: wrap;
+            text-align: left;
+            margin-left: 5px;
+        }
+
+        tr td:nth-child(3) {
+            width: 45%;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+            justify-content: left;
+            margin-left: 10px;
+        }
+
+        tr td:nth-child(2) {
+            margin: 0px;
+            padding: 0px;
+            width: 45%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            font-size: 13px !important;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        .container-fluid {
+            /* position: -webkit-sticky; */
+            position: sticky !important;
+            top: 0;
+        }
+        @media screen and (max-width:600px) {
+           #data{
+               width: 100%;
+           } 
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Nar barr -->
+        <div class="row" class="nar-bar">
+            <ul class="limenu">
+                <li><a class="active" href="http://minhkhacld.github.io/dictionary">Home</a></li>
+                <li><a href="http://minhkhacld.github.io/maytinh">Incentive</a></li>
+                <li><a href="http://minhkhacld.github.io/copt">COPT</a></li>
+                <li><a href="http://minhkhacld.github.io/smv">SVM</a></li>
+                <!-- <li><a href="#contact">Contact</a></li> -->
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h1>TỪ ĐIỂN NGÀNH MAY</h1>
+            <!-- <div class="form-group">
+                <label for="">Nhập từ cần tìm</label>
+                <input type="text" class="form-control" name="" id="input" aria-describedby="helpId"
+                    placeholder="Nhập mã hàng cần tìm">
+            </div> -->         
+           
+        </div>
+        <div class="row">
+            Cách tra cứu:
+        </div>
+        <div class="row">
+            <strong>Điện thoại</strong>: Chọn nút <strong>Cài đặt</strong> và chọn <strong>Tìm trong trang</strong>
+        </div>
+        <div class="row">
+            <strong>Máy tính</strong>: Nhấn <strong>Ctr + F</strong>
+        </div>
+        <div class="row" id="tabledata">
+            <table style="width: 350px">
+                <tbody id="data">
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h6><i class="fas fa-user-tie" style="margin: 5px 3px; color:white;font-size: 13px;"></i>IE.Khapham <i
+                    class="fas fa-phone" style="margin: 5px 3px; color:white;font-size: 13px;"></i> 0355210716 <i
+                    class="far fa-envelope" style="margin: 5px 3px; color:white; font-size: 13px;"></i>pmkha92@gmail.com
+            </h6>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var spData = null;
+        function doData(json) {
+            spData = json.feed.entry;
+            // var data_origin = json.feed.entry
+            // var spData = data_origin.reverse()
+            console.log(spData);
+            console.log(spData[0]['content']['$t']);
+            console.log(spData[1]['content']['$t']);
+            console.log(spData[2]['content']['$t']);
+            $('#data').html('');
+            // Code thêm tiêu đề
+            $('#data').append('<tr data-style=" data-smv=" id="tieude" style="font-size:12px; color:white; font-weight:bold;margin-top:3px; margin-bottom:3px; background-color: #fc03e8; "><td>STT</td><td>Tiếng Việt</td><td>English</td></tr>');
+
+            for (i = 3; i < spData.length; i += 3) {
+                $('#data').append('<tr id ="dulieu" data-style="' + spData[i]['content']['$t'] + '" data-smv="' + spData[(i + 2)]['content']['$t'] + '"><td>' + spData[i]['content']['$t'] + '</td><td>' + spData[(i + 1)]['content']['$t'] + '</td><td>' + spData[(i + 2)]['content']['$t'] + '</td></tr>');
+            }
+        }
+        $(document).ready(function () {
+            $('body').on('click', '#show', function () {
+                // if ($('#tabledata').css('display') == 'flex') {
+                //     $('#tabledata').css('display', 'none');
+                // } else {
+                //console.log($('#tabledata').css('display'));
+                $('#tabledata').css('display', 'flex')
+                // }
+            });
+            // $('body').on('keyup', '#input', function () {
+            //     $('#tabledata').css('display', 'flex');
+            //     let search = $(this).val().toLowerCase();
+            //     for (let i = 0; i < $('tr').length; i++) {
+            //         $($('tr')[i]).css('display', 'flex');
+            //         let style = $($('tr')[i]).attr('data-style').toLowerCase();
+            //         //let smv = $($('tr')[i]).attr('data-smv');
+            //         if (style.includes(search)) {
+            //             $($('tr')[i]).css('display', 'flex');
+            //             document.getElementById("tieude").style.display = "flex"                        
+            //         } else {
+            //             $($('tr')[i]).css('display', 'none');
+            //         }
+            //     }
+            // })
+        });
+    </script>
+    <!-- <script
+        src="https://spreadsheets.google.com/feeds/cells/1kfcNBmT07k0UZ6if0U7BAnna0ZwbQ2nmPu3QxE_TnZE/1/public/values?alt=json-in-script&callback=doData"></script> -->
+    <script
+        src="https://spreadsheets.google.com/feeds/cells/14NOn0_pd6SgaCrisHFnagcEYZVYNgKqfWZoSygfJf6U/1/public/values?alt=json-in-script&callback=doData"></script>
+</body>
+
+</html>
